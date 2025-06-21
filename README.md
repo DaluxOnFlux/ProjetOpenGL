@@ -34,6 +34,8 @@ Ce projet simule un **système solaire en 3D** avec le Soleil, la Terre et la Lu
 
 ```bash
 git clone --recurse-submodules https://github.com/DaluxOnFlux/ProjetOpenGL.git
+```
+```bash
 cd ProjetOpenGL
 ```
 
@@ -60,13 +62,19 @@ cd ProjetOpenGL
 
 ## 💻 Installation selon votre OS
 
-### 🪟 Windows – Visual Studio 2022
+### 🪟 Windows – Visual Studio 2022 (dans un terminal commandPrompt et non un Powershell)
 
 ```bash
 cd vcpkg
+```
+```bash
 .bootstrap-vcpkg.bat
+```
+
+```bash
 cd ..
 ```
+> ⚠️retourner a la racine du projet
 
 ```bash
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64 ^
@@ -76,7 +84,14 @@ cmake -S . -B build -G "Visual Studio 17 2022" -A x64 ^
 
 ```bash
 cmake --build build --config Release
+```
+```bash
 cd build/Release
+```
+
+## 🚀 Lancement
+
+```bash
 DalilAlassane.exe
 ```
 
@@ -88,17 +103,27 @@ DalilAlassane.exe
 
 ```bash
 pacman -Syu
-pacman -S   mingw-w64-x86_64-gcc   mingw-w64-x86_64-cmake   mingw-w64-x86_64-glfw   mingw-w64-x86_64-glm   mingw-w64-x86_64-glew   git
+```
+```bash
+pacman -S mingw-w64-x86_64-toolchain git cmake make
 ```
 
 📦 **Générer et compiler le projet** :
 
 ```bash
-cmake -S . -B build -G "MinGW Makefiles"   -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake   -DVCPKG_TARGET_TRIPLET=x64-mingw-static
+cmake -S . -B build \
+  -G "MinGW Makefiles" \
+  -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake \
+  -DVCPKG_TARGET_TRIPLET=x64-mingw-static
 ```
 
 ```bash
 cmake --build build -j$(nproc)
+```
+
+## 🚀 Lancement
+
+```bash
 ./build/DalilAlassane.exe
 ```
 
@@ -115,16 +140,40 @@ sudo apt update && sudo apt upgrade -y
 📦 **2. Installer les dépendances**
 
 ```bash
-sudo apt install -y   build-essential   cmake   git   libx11-dev   libxrandr-dev   libxi-dev   libgl1-mesa-dev   libxinerama-dev   libxcursor-dev   zlib1g-dev   pkg-config   curl
+sudo apt install -y \
+ build-essential \
+ cmake \
+ git \
+ libx11-dev \
+ libxrandr-dev \
+ libxi-dev \
+ libgl1-mesa-dev \
+ libxinerama-dev \
+ libxcursor-dev \
+ zlib1g-dev \
+ pkg-config
+```
+
+```bash
+sudo apt install build-essential cmake libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libxinerama-dev libxcursor-dev
+```
+
+```bash
+sudo apt install curl
 ```
 
 🧱 **3. Configurer vcpkg**
 
 ```bash
 cd vcpkg
+```
+```bash
 ./bootstrap-vcpkg.sh
+```
+```bash
 cd ..
 ```
+> ⚠️retourner a la racine du projet
 
 🛠️ **4. Générer et compiler**
 
@@ -134,21 +183,20 @@ cmake -S . -B build   -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.
 
 ```bash
 cmake --build build -j$(nproc)
+```
+
+## 🚀 Lancement
+
+```bash
 ./build/DalilAlassane
 ```
 
 ---
 
-## 🚀 Lancement
-
-- Sur **Windows (Visual Studio)** : `build/Release/DalilAlassane.exe`
-- Sur **Linux / MINGW64** : `./build/DalilAlassane`
-
----
 
 ## 🙌 Auteurs
 
-- **Dalil Hiane**  
-- **Alassane [Nom à compléter]**
+- **Dalil HIANE**  
+- **Alassane TRAORE**
 
-> Projet réalisé dans le cadre du cours de **Computer Graphics (ESIEE IT)** – 2025
+> Projet réalisé dans le cadre du cours de **Computer Graphics (ESIEE)** – 2025
