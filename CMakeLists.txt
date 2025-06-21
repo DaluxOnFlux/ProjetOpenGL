@@ -18,6 +18,7 @@ add_executable(${PROJECT_NAME}
     src/stb_impl.cpp
     src/imgui/backends/imgui_impl_glfw.cpp
     src/imgui/backends/imgui_impl_opengl3.cpp
+    src/Skybox.cpp src/Skybox.hpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -33,4 +34,15 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     tinyobjloader::tinyobjloader
     imgui::imgui
     opengl32
+)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_SOURCE_DIR}/assets"
+            "$<TARGET_FILE_DIR:${PROJECT_NAME}>/assets"
+)
+
+add_custom_target(show_outfile ALL
+    COMMAND ${CMAKE_COMMAND} -E echo "[INFO] Built: $<TARGET_FILE:${PROJECT_NAME}>"
+    DEPENDS ${PROJECT_NAME}
 )

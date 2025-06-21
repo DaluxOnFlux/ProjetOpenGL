@@ -1,13 +1,20 @@
 #pragma once
-#include <tiny_obj_loader.h>
-#include <glad/glad.h>
-#include <glm/glm.hpp>
+
 #include <string>
+#include <glad/glad.h>
+#include <tiny_obj_loader.h>
 
 class ObjModel {
 public:
-    GLuint vao, vbo, ebo;
-    int indicesCount;
-    ObjModel(const std::string& path);
+    explicit ObjModel(const std::string& path);
     void draw() const;
+    void loadTexture(const std::string& path);
+
+    GLuint textureID = 0;
+
+private:
+    GLuint vao = 0;
+    GLuint vbo = 0;
+    GLuint ebo = 0;
+    GLsizei indicesCount = 0;
 };
