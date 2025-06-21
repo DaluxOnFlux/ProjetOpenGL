@@ -17,6 +17,22 @@ Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la L
 - CMake ≥ 3.25
 - Git
 
+## 🧪 Pour MSYS2 / MINGW64
+
+- MSYS2 installé : https://www.msys2.org
+- Terminal : **MINGW64** (pas MSYS ni UCRT !)
+- Installer les dépendances :
+  ```bash
+  pacman -Syu
+  pacman -S \
+    mingw-w64-x86_64-gcc \
+    mingw-w64-x86_64-cmake \
+    mingw-w64-x86_64-glfw \
+    mingw-w64-x86_64-glm \
+    mingw-w64-x86_64-glew \
+    git
+  ```
+
 ---
 
 ## 📥 Cloner le projet
@@ -51,9 +67,23 @@ cd build/Release
 DalilAlassane.exe
 ```
 
-# ► Linux / macOS (gcc/clang)
+# ► Windows avec MSYS2 / MINGW64
 
-# Installe les dépendances
+```bash
+cmake -S . -B build \
+  -G "MinGW Makefiles" \
+  -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+```
+
+```bash
+cmake --build build -j$(nproc)
+```
+
+```bash
+./build/DalilAlassane.exe
+```
+
+# ► Linux / macOS (gcc/clang)
 
 ```bash
 sudo apt install build-essential cmake libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libxinerama-dev libxcursor-dev
@@ -62,11 +92,10 @@ sudo apt install build-essential cmake libx11-dev libxrandr-dev libxi-dev libgl1
 ```bash
 cmake -S . -B build \
  -DCMAKE_TOOLCHAIN_FILE=.\vcpkg\scripts\buildsystems\vcpkg.cmake
-cmake --build build -j$(nproc)
 ```
 
 ```bash
-cmake --build build --config Release
+cmake --build build -j$(nproc)
 ```
 
 ```bash
