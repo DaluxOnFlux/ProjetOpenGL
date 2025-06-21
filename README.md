@@ -7,6 +7,7 @@ Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la L
 ## 🚀 Plateformes supportées
 
 - ✅ **Windows** (Visual Studio + vcpkg)
+- ✅ **Windows** (MSYS2 / MINGW64)
 - ✅ **Linux** (GCC/G++ ou Clang + vcpkg)
 
 ---
@@ -70,9 +71,14 @@ DalilAlassane.exe
 # ► Windows avec MSYS2 / MINGW64
 
 ```bash
+pacman -S mingw-w64-x86_64-toolchain git cmake make
+```
+
+```bash
 cmake -S . -B build \
   -G "MinGW Makefiles" \
-  -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake
+  -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake \
+  -DVCPKG_TARGET_TRIPLET=x64-mingw-static
 ```
 
 ```bash
