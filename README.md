@@ -76,7 +76,7 @@ sudo apt install -y \
 
 ## 🔨 Générer le projet avec CMake
 
-# ► Windows 10/11 (x64 · Visual Studio 2022)
+# ► Windows 10/11 (x64 · Visual Studio 2022) (command prompt pas Powershell pour eviter les conflits)
 
 ```bash
 cd vcpkg
