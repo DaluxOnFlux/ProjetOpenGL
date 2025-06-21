@@ -68,7 +68,7 @@ cd ProjetOpenGL
 cd vcpkg
 ```
 ```bash
-.bootstrap-vcpkg.bat
+.\bootstrap-vcpkg.bat
 ```
 
 ```bash
