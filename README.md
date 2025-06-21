@@ -39,10 +39,13 @@ Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la L
 
 # 🔁 1. Mettre à jour le système
 
+```bash
 sudo apt update && sudo apt upgrade -y
+```
 
 # 📦 2. Installer les dépendances principales
 
+```bash
 sudo apt install -y \
  build-essential \
  cmake \
@@ -55,6 +58,7 @@ sudo apt install -y \
  libxcursor-dev \
  zlib1g-dev \
  pkg-config
+```
 
 ---
 
