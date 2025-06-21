@@ -124,8 +124,19 @@ sudo apt install build-essential cmake libx11-dev libxrandr-dev libxi-dev libgl1
 ```
 
 ```bash
+sudo apt install curl
+```
+
+```bash
+cd vcpkg
+./bootstrap-vcpkg.sh
+```
+
+```bash
 cmake -S . -B build \
- -DCMAKE_TOOLCHAIN_FILE=.\vcpkg\scripts\buildsystems\vcpkg.cmake
+  -DCMAKE_TOOLCHAIN_FILE=./vcpkg/scripts/buildsystems/vcpkg.cmake \
+  -DOpenGL32_LIBRARY=/usr/lib/x86_64-linux-gnu/libGL.so
+
 ```
 
 ```bash
