@@ -1,3 +1,12 @@
+
+
+
+
+https://github.com/user-attachments/assets/7c3d3adc-37dd-4a25-8d8f-7b15efc1cd87
+
+
+
+
 # 🌌 Projet OpenGL – Système Solaire (Dalil & Alassane)
 
 Ce projet simule un **système solaire en 3D** avec le Soleil, la Terre et la Lune. L'utilisateur peut **naviguer librement** à l’aide d’une **caméra contrôlable** et interagir avec une **interface graphique ImGui**.
