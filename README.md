@@ -35,11 +35,11 @@ Ce projet simule un **système solaire en 3D** avec le Soleil, la Terre et la Lu
 ```bash
 git clone --recurse-submodules https://github.com/DaluxOnFlux/ProjetOpenGL.git
 ```
+> ⚠️ `--recurse-submodules` est **obligatoire** pour récupérer **vcpkg**
+
 ```bash
 cd ProjetOpenGL
 ```
-
-> ⚠️ `--recurse-submodules` est **obligatoire** pour récupérer **vcpkg**
 
 ---
 
