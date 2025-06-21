@@ -30,14 +30,6 @@ cd ProjetOpenGL
 - CMake ≥ 3.25
 - Git
 
-## 🧪 Pour Windows
-
-```bash
-cd vcpkg
-.\bootstrap-vcpkg.bat
-cd ..
-```
-
 ## 🧪 Pour MSYS2 / MINGW64
 
 - MSYS2 installé : https://www.msys2.org
@@ -85,6 +77,17 @@ sudo apt install -y \
 ## 🔨 Générer le projet avec CMake
 
 # ► Windows 10/11 (x64 · Visual Studio 2022)
+
+```bash
+cd vcpkg
+.\bootstrap-vcpkg.bat
+```
+
+(retour a la racine du projet)
+
+```bash
+cd ..
+```
 
 ```bash
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64 ^
