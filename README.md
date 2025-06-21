@@ -30,6 +30,14 @@ cd ProjetOpenGL
 - CMake ≥ 3.25
 - Git
 
+## 🧪 Pour Windows
+
+```bash
+cd vcpkg
+.\bootstrap-vcpkg.bat
+cd ..
+```
+
 ## 🧪 Pour MSYS2 / MINGW64
 
 - MSYS2 installé : https://www.msys2.org
@@ -47,7 +55,7 @@ cd ProjetOpenGL
     git
   ```
 
-  ## 🧪 Pour Linux
+## 🧪 Pour Linux
 
 # 🔁 1. Mettre à jour le système
 
