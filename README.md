@@ -48,7 +48,7 @@ cd build/Release
 ```
 
 ```bash
-./DalilAlassane.exe
+DalilAlassane.exe
 ```
 
 # ► Linux / macOS (gcc/clang)
