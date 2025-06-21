@@ -1,51 +1,74 @@
-# OpenGL Projet – Dalil et Alassane - ESIEE
+# Projet OpenGL – Système Solaire (Dalil & Alassane)
 
-## Pré-requis
+Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la Lune, entièrement contrôlable avec la caméra et une interface ImGui.
 
-- CMake >= 3.25
-- Visual Studio 2022
+---
+
+## 🚀 Plateformes supportées
+
+- ✅ **Windows** (Visual Studio + vcpkg)
+- ✅ **Linux** (GCC/G++ ou Clang + vcpkg)
+
+---
+
+## 🔧 Prérequis
+
+- Visual Studio 2022 (avec le kit de développement Desktop C++)
+- CMake ≥ 3.25
 - Git
 
-## Clonage
+---
+
+## 📥 Cloner le projet
 
 ```bash
-
-git clone --recursive https://github.com/DaluxOnFlux/ProjetOpenGL.git #Le --recursive est indispensable monsieur : il télécharge src/vcpkg
-
+git clone --recurse-submodules https://github.com/DaluxOnFlux/ProjetOpenGL.git
 cd ProjetOpenGL
 
 ```
 
-## Installation (commande a suivre pour avoir aucun probleme monsieur)
+⚠️ Le --recurse-submodules est essentiel pour récupérer vcpkg
 
-# 1 vcpkg
+## 🔨 Générer le projet avec CMake
 
-cd src/vcpkg
-.\bootstrap-vcpkg.bat
-.\vcpkg install
+# ► Windows 10/11 (x64 · Visual Studio 2022)
 
----
-
-# Linux / macOS :
-
-## ./bootstrap-vcpkg.sh puis ./vcpkg install
-
-cd ../..
-
-# 2 Génération CMake (copier la commande entiere)
-
-► Windows 10/11 (x64 · Visual Studio 2022)
-
+```bash
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64 ^
 -DCMAKE_TOOLCHAIN_FILE=.\vcpkg\scripts\buildsystems\vcpkg.cmake ^
 -DVCPKG_TARGET_TRIPLET=x64-windows
+```
 
+```bash
 cmake --build build --config Release
+```
 
-.\build\Release\SolarSystem.exe
+```bash
+cd build/Release
+```
 
-► Linux / macOS (gcc/clang)
+```bash
+./DalilAlassane.exe
+```
 
+# ► Linux / macOS (gcc/clang)
+
+# Installe les dépendances
+
+```bash
+sudo apt install build-essential cmake libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libxinerama-dev libxcursor-dev
+```
+
+```bash
 cmake -S . -B build \
  -DCMAKE_TOOLCHAIN_FILE=.\vcpkg\scripts\buildsystems\vcpkg.cmake
 cmake --build build -j$(nproc)
+```
+
+```bash
+cmake --build build --config Release
+```
+
+```bash
+./build/DalilAlassane
+```
