@@ -23,6 +23,7 @@ Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la L
 - MSYS2 installé : https://www.msys2.org
 - Terminal : **MINGW64** (pas MSYS ni UCRT !)
 - Installer les dépendances :
+
   ```bash
   pacman -Syu
   pacman -S \
@@ -33,6 +34,27 @@ Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la L
     mingw-w64-x86_64-glew \
     git
   ```
+
+  ## 🧪 Pour Linux
+
+# 🔁 1. Mettre à jour le système
+
+sudo apt update && sudo apt upgrade -y
+
+# 📦 2. Installer les dépendances principales
+
+sudo apt install -y \
+ build-essential \
+ cmake \
+ git \
+ libx11-dev \
+ libxrandr-dev \
+ libxi-dev \
+ libgl1-mesa-dev \
+ libxinerama-dev \
+ libxcursor-dev \
+ zlib1g-dev \
+ pkg-config
 
 ---
 
