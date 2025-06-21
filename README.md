@@ -4,6 +4,18 @@ Ce projet représente un système solaire en 3D avec le Soleil, la Terre et la L
 
 ---
 
+## 📥 Cloner le projet
+
+```bash
+git clone --recurse-submodules https://github.com/DaluxOnFlux/ProjetOpenGL.git
+cd ProjetOpenGL
+
+```
+
+⚠️ Le --recurse-submodules est essentiel pour récupérer vcpkg
+⚠️ Le --recurse-submodules est essentiel pour récupérer vcpkg
+⚠️ Le --recurse-submodules est essentiel pour récupérer vcpkg
+
 ## 🚀 Plateformes supportées
 
 - ✅ **Windows** (Visual Studio + vcpkg)
@@ -61,16 +73,6 @@ sudo apt install -y \
 ```
 
 ---
-
-## 📥 Cloner le projet
-
-```bash
-git clone --recurse-submodules https://github.com/DaluxOnFlux/ProjetOpenGL.git
-cd ProjetOpenGL
-
-```
-
-⚠️ Le --recurse-submodules est essentiel pour récupérer vcpkg
 
 ## 🔨 Générer le projet avec CMake
 
