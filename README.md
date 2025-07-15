@@ -208,4 +208,4 @@ cmake --build build -j$(nproc)
 - **Dalil HIANE**  
 - **Alassane TRAORE**
 
-> Projet réalisé dans le cadre du cours de **Computer Graphics (ESIEE)** – 2025
+> Projet réalisé dans le cadre du cours de **Computer Graphics (ESIEE PARIS)** – 2025
